@@ -1,0 +1,17 @@
+{
+  "run_id": "8fe9e76c",
+  "report_status": "submitted",
+  "summary": "mock audit finished",
+  "findings": [
+    {
+      "title": "Reentrancy in withdraw",
+      "vulnerability_type": "reentrancy",
+      "severity": "high",
+      "location": "src/Vault.sol:withdraw",
+      "description": "The balance is decreased only after the external call.",
+      "attack_scenario": "An attacker contract re-enters withdraw() from its receive() function.",
+      "confidence": "medium"
+    }
+  ],
+  "schema_warnings": []
+}

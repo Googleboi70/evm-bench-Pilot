@@ -1,0 +1,102 @@
+Script started on 2026-11-15 05:26:29-11:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="173" LINES="13"]
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot[00m$ cd scripts/
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ che[K[K[Kls
+[?2004l[0m[01;32mcheck_task.sh[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ c
+Display all 266 possibilities? (y or n)
+]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ c[Kls
+[?2004l[0m[01;32mcheck_task.sh[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ c[Kls[K[Kbash check_task.sh ../tasks/ctf-poly-network/
+[?2004lcp: cannot stat '../tasks/ctf-poly-network//vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network//grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network//grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ bash check_task.sh ../tasks/ctf-poly-network/[K
+[?2004lcp: cannot stat '../tasks/ctf-poly-network/vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ cd ../tasks/gr[K[K
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[00m$ ls
+[?2004l[0m[34;42mctf-poly-network[0m  [34;42mCyberChainBench[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[00m$ ls
+[?2004l[0m[34;42mctf-poly-network[0m  [34;42mCyberChainBench[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[00m$ cd ctf-poly-network/
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks/ctf-poly-network[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks/ctf-poly-network[00m$ ls
+[?2004l[0m[34;42mFixed[0m  [34;42mgrader[0m  [34;42mVulnerable[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks/ctf-poly-network[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks/ctf-poly-network[00m$ mv ge[Krader/ ../
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks/ctf-poly-network[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks/ctf-poly-network[00m$ cd ..
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/tasks[00m$ cd ..
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot[00m$ cd scripts/
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ ls
+[?2004l[0m[01;32mcheck_task.sh[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ lscd scripts/..[Kmv grader/ ../ls[Kcd ctf-poly-network/ls[Kcd ../tasks/bash check_task.sh ../tasks/ctf-poly-network/[Kcd ../tasks/[Kbash check_task.sh ../tasks/ctf-poly-network
+[?2004lcp: cannot stat '../tasks/ctf-poly-network/vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ bash check_task.sh ../tasks/ctf-poly-network
+[?2004lcp: cannot stat '../tasks/ctf-poly-network/vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ bash check_task.sh ../tasks/ctf-poly-network
+[?2004lcp: cannot stat '../tasks/ctf-poly-network/vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ bash check_task.sh ../tasks/ctf-poly-network
+[?2004lcp: cannot stat '../tasks/ctf-poly-network/vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ bash check_task.sh ../tasks/ctf-poly-network
+[?2004l^[[A
+cp: cannot stat '../tasks/ctf-poly-network/vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ bash check_task.sh ../tasks/ctf-poly-network
+[?2004lcp: cannot stat '../tasks/ctf-poly-network/vuln/.': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Exploit.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ ls
+[?2004l[0m[01;32mcheck_task.sh[0m  [01;32mcheck_tasks.sh[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ ls -lh
+[?2004ltotal 8.0K
+-rwxrwxrwx 1 googleboi googleboi 1.1K Nov 15 05:22 [0m[01;32mcheck_task.sh[0m
+-rwxrwxrwx 1 googleboi googleboi 1.1K Nov 15 05:33 [01;32mcheck_tasks.sh[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ ls -lh[Kbash check_task.sh ../tasks/ctf-poly-network[1@s
+[?2004lcp: cannot stat '../tasks/ctf-poly-network/grader/Solution.t.sol': No such file or directory
+cp: cannot stat '../tasks/ctf-poly-network/grader/Solution.t.sol': No such file or directory
+vuln : exploit test pass   (expected: pass)
+fixed: exploit test pass   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ bash check_tasks.sh ../tasks/ctf-poly-network
+[?2004lvuln : exploit test fail   (expected: pass)
+fixed: exploit test fail   (expected: fail)
+TASK INVALID
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ ls
+[?2004l[0m[01;32mcheck_task.sh[0m  [01;32mcheck_tasks.sh[0m
+[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot/scripts[00m$ cd ..
+[?2004l[?2004h]0;googleboi@DESKTOP-6EGOV0D: /mnt/c/Users/user/Desktop/Projects/evmbench-pilot[01;32mgoogleboi@DESKTOP-6EGOV0D[00m:[01;34m/mnt/c/Users/user/Desktop/Projects/evmbench-pilot[00m$ [?2004l
+exit
+
+Script done on 2026-11-15 05:49:11-11:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,17 @@
+{
+  "run_id": "610be4e1",
+  "report_status": "submitted",
+  "summary": "The contract reproduces the exact vulnerability from the 2021 Poly Network hack (~$611M). CrossChainManager.verifyHeaderAndExecuteTx allows arbitrary external calls to any address, including its own CrossChainData contract. Since CrossChainManager is the owner of CrossChainData, an attacker can craft a cross-chain message that calls putCurEpochConPubKeyBytes on CrossChainData, replacing the consensus public key that secures all future cross-chain verifications.",
+  "findings": [
+    {
+      "title": "Unrestricted toContract call allows consensus key takeover",
+      "vulnerability_type": "access control",
+      "severity": "critical",
+      "location": "src/PolyNetworkCrossChain.sol:verifyHeaderAndExecuteTx (lines 82-95)",
+      "description": "The verifyHeaderAndExecuteTx function accepts a caller-supplied toContract address and calls it with arbitrary calldata without validating that the target is not the manager's own dataContract. Since dataContract.owner() == address(this) (the manager), any onlyOwner function on dataContract becomes callable via a crafted cross-chain message. The real Poly Network hack exploited this exact path to replace the consensus public key (putCurEpochConPubKeyBytes), giving the attacker control over all future cross-chain message verification.",
+      "attack_scenario": "1. Attacker constructs a cross-chain message with toContract = address(dataContract), method = 'putCurEpochConPubKeyBytes', args = attacker-controlled new consensus key, and a valid proof (in this simplified version, any non-empty bytes). 2. Attacker calls verifyHeaderAndExecuteTx with these parameters. 3. _verifyProof passes (proof.length > 0). 4. The manager calls dataContract.putCurEpochConPubKeyBytes(attackerKey). 5. Since msg.sender == manager == dataContract.owner(), the onlyOwner check passes. 6. The consensus key is updated to attackerKey. 7. Attacker can now forge valid proofs for any future cross-chain message, draining all locked assets on destination chains.",
+      "confidence": "high"
+    }
+  ],
+  "schema_warnings": []
+}

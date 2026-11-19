@@ -1,0 +1,44 @@
+{
+  "run_id": "ff9f26e8",
+  "report_status": "submitted",
+  "summary": "The Contribution contract contains multiple critical vulnerabilities: (1) reentrancy in fulfillRandomWords where external call to winner is made before state updates, (2) hasContributed mapping never reset between rounds breaking multi-round mechanism, (3) reentrancy in contribute via external call to receiveContribution contract, (4) performUpkeep/checkUpkeep mismatch for multiple groups.",
+  "findings": [
+    {
+      "title": "Reentrancy in fulfillRandomWords",
+      "vulnerability_type": "reentrancy",
+      "severity": "critical",
+      "location": "src/PolyNetworkCrossChain.sol:fulfillRandomWords (lines 436-469)",
+      "description": "The fulfillRandomWords function makes an external call to the winner address with value (line 455) before updating critical state variables (lines 458-468). A malicious winner contract can re-enter the contract and manipulate state, potentially draining funds or disrupting the round logic.",
+      "attack_scenario": "1. Attacker creates a malicious contract that implements a fallback function. 2. Attacker ensures their contract becomes a contributor and wins a round. 3. When fulfillRandomWords calls winner.call{value: group.payout}(\"\"), the malicious contract re-enters contribute() or createGroup() or withdraw(). 4. Since state updates happen after the call, the re-entrant call sees stale state and can exploit it.",
+      "confidence": "high"
+    },
+    {
+      "title": "hasContributed Mapping Never Reset Between Rounds",
+      "vulnerability_type": "logic error",
+      "severity": "high",
+      "location": "src/PolyNetworkCrossChain.sol:contribute (line 297) and fulfillRandomWords (line 458)",
+      "description": "The hasContributed[groupId][msg.sender] mapping is set to true when a contributor contributes (line 309) but is never reset when a new round begins. The contribute function requires !hasContributed[groupId][msg.sender] (line 297), so after the first round, contributors can never contribute again, breaking the multi-round mechanism entirely.",
+      "attack_scenario": "1. Group is created with 2 contributors. 2. Both contributors contribute in round 1 - hasContributed set to true for both. 3. VRF picks winner, fulfillRandomWords resets currentRoundContributedContributors array but NOT hasContributed mapping. 4. Round 2 begins. 5. Contributors try to contribute again but revert with 'Already contributed this round'. 6. No further contributions possible, contract stalls.",
+      "confidence": "high"
+    },
+    {
+      "title": "Reentrancy in contribute via receiveContribution Contract Call",
+      "vulnerability_type": "reentrancy",
+      "severity": "medium",
+      "location": "src/PolyNetworkCrossChain.sol:contribute (lines 280-330, specifically line 315)",
+      "description": "The contribute function calls receiveContributionContract.receiveContributionData() (line 315) after updating some state but before updating allContributed and pushing to s_UpkeepNeededGroupIds. A malicious receiveContribution contract could re-enter contribute() or other functions.",
+      "attack_scenario": "1. Owner sets a malicious receiveContribution contract via setAddress. 2. Contributor calls contribute(). 3. Malicious receiveContributionContract.receiveContributionData() re-enters contribute() for the same or different group. 4. Could manipulate state or call other functions like createGroup().",
+      "confidence": "medium"
+    },
+    {
+      "title": "performUpkeep/checkUpkeep Mismatch for Multiple Groups",
+      "vulnerability_type": "logic error",
+      "severity": "medium",
+      "location": "src/PolyNetworkCrossChain.sol:checkUpkeep (lines 385-406) and performUpkeep (lines 408-434)",
+      "description": "checkUpkeep only examines s_UpkeepNeededGroupIds[0] and returns performData for that group. However, if multiple groups need upkeep, only the first is ever processed. The automation system calls checkUpkeep then performUpkeep with the returned performData, so groups at index > 0 are never serviced until all preceding groups are cleared.",
+      "attack_scenario": "1. Multiple groups are created and allContributed becomes true for each, pushing them to s_UpkeepNeededGroupIds. 2. Automation calls checkUpkeep, which only returns data for group at index 0. 3. Groups at index 1+ never get VRF requests, stalling their rounds indefinitely.",
+      "confidence": "medium"
+    }
+  ],
+  "schema_warnings": []
+}
